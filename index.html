@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dash, responsive bootstrap dashboard navbar">
+    <meta name="keywords" content="HTML, CSS, JS, JavaScript, dashboard, bootstrap, front-end, frontend, web development, normal, navbar">
+    <meta name="author" content="CodBits">
+
+    <title>Documentation</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet'  type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet'  type='text/css'>
+    <!-- Bootstrap core and other CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="assets/css/grayscale_docu.css" rel="stylesheet">
+    <link href="assets/css/menu.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="assets/js/grayscale.js"></script>
+
+<style>
+ul li {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  
+}
+li.menu{
+	padding: 15px 15px ;
+}
+ul li:hover {
+  color: #fff;
+}
+.menu-on-top ul li ul {
+  padding: 0;
+  position: absolute;   
+  width: 115px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;  
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.menu-on-top ul li ul li { 
+  background-color: #658384;
+  display: block; 
+  color: #fff;
+}
+.menu-on-top ul li ul li:hover { background-color: #819e99 } 
+
+.menu-on-top ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-on-top nav ul ul {
+    display: block;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
+    opacity: 0; 
+    padding: 20px 0px;
+    height: 0;
+    overflow: hidden;
+}
+.menu-on-top nav ul li:hover > ul {
+    height: auto;
+    opacity: 1;
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 640px) {	
+	.menu-on-top ul li ul li {
+		display: none;
+	}
+}
+</style>
+  </head>
+<body>
+<script src="assets/js/script.js"></script>
+
+<div class="main-wrap">
+
+    <div class="menu-on-top">
+		<nav class="navbar navbar-static-top dash-navbar-top dnl-visible">
+			<div class="container">
+			  <div class="navbar-header page-scroll">
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+					<i class="fa fa-bars"></i>
+				  </button>
+				  <div class="navbar-left">
+					<img src="assets/images/logo.png" alt="">
+				  </div>
+			 </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="navbar-collapse navbar-right navbar-main-collapse">
+					<ul class="nav navbar-nav">
+						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+						<li class="page-scroll">
+							<a href="index.html#about" class="hidden-xs">Home</a>
+							<a href="index.html#about" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Home</a>
+						</li>
+						
+						<li class="page-scroll">
+							<a href="index.html#download" class="hidden-xs">Download</a>
+							<a href="index.html#download" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Download</a>
+						</li>
+						<li class="page-scroll">
+							<a class="hidden-xs active">Documentation</a>
+							<a class="visible-xs active" data-toggle="collapse" data-target=".navbar-collapse">Documentation</a>
+						</li>
+						 <li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Learning</a>
+				  <ul>  
+					  <li class="menu">Basics</li>
+					  <li class="menu">Counters</li>
+					  <li class="menu">Serial</li>
+					  <li class="menu">SPI</li>
+					  <li class="menu">IIC</li>
+					  <li class="menu">oneWire</li>
+					  <li class="menu">LCD</li>
+					  <li class="menu">RTC</li>
+					  <li class="menu">PWM</li>
+				</ul>
+			</li>
+						
+						<li class="page-scroll">
+							<a href="index.html#bootloader" class="hidden-xs">Bootloader</a>
+							<a href="index.html#bootloader" class="visible-xs">Bootloader</a>
+						</li>
+						<li class="page-scroll">
+							<a href="index.html#contact" class="hidden-xs">Contact</a>
+							<a href="index.html#contact" class="visible-xs" data-target=".navbar-collapse">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
+    </div> 
+	
+	<div class="col-md-12 nopadding">
+			<div class="dash-navbar-left dnl-visible col-md-2 relative menu_fix">
+				<p class="dnl-nav-title">Documentation 2.x</p>
+				<ul class="dnl-nav" id="menu">
+				
+				
+				</ul>
+			
+			</div>
+		<div class="col-md-8 content" id="content">
+
+
+		</div>
+		<div class="col-md-2 admin_panel">
+		<p class="head_admin">Panel administratora:</p>
+		<p class="alert_admin"></p>
+		<p class="info_admin">Zaloguj się:</p>
+			<form>
+			  <p>Login:</p>
+			  <input type="text" name="loginD" class="form-control" id="loginD">
+			  <p>Hasło:</p>
+			  <input type="password" name="pass" id="passD" class="form-control">
+			  <button type="submit"  class="btn btn-success" id="login">Zaloguj</button>
+			</form> 
+				<p class="info_admin">Zarejestruj się:</p>
+			<form >  	
+			  <p>Login</p>
+			  <input type="text" name="login" class="form-control" id="login1">
+			   <p>Hasło:</p>
+			  <input type="password"  id="pass1" name="password1" class="form-control">
+			   <p>Powtórz hasło:</p>
+			  <input type="password"  id="pass2" name="password2" class="form-control">
+			  <button type="submit"  class="btn btn-success" id="register">Zarejestruj</button>
+			</form> 
+		</div>
+	</div>
+</div>
+</body>
+<script>
+$(document).ready(function() { 
+	$.ajax({  
+	  type: "GET",
+      url: 'getMenu.php',                      
+      data: "",                                                             
+	  async:false,	  
+      success: function(data)         
+      {
+	  var json = JSON.parse(data);
+	  var result_data = "";
+	  var data_length = Object.keys(json).length;
+	  var counter = 1;
+	  for (i=0; i < data_length; i++){
+			if(json[i].search('n:') != -1 && i == 0){
+			      result_data +='<li><a class="collapsed accordion-toggle get_content" data-toggle="collapse" href="#'+ counter +'" aria-expanded="true"><span class="fa fa-chevron-down dnl-link-icon"></span><span class="dnl-link-text get_content_sp">'+ json[i].substring(3) +'</span><span class="dnl-btn-sub-collapse"></span></a><ul class="dnl-sub-one collapse" id='+ counter +'>';
+				  counter++;
+			}
+			else if(json[i].search('n:') != -1){
+					result_data +='</ul></li><li><a class="collapsed accordion-toggle get_content" data-toggle="collapse" href="#'+ counter +'" aria-expanded="true"><span class="fa fa-chevron-down dnl-link-icon"></span><span class="dnl-link-text get_content_sp">'+ json[i].substring(3) +'</span><span class="dnl-btn-sub-collapse"></span></a><ul class="dnl-sub-one collapse" id='+counter+'>';
+				counter++;
+			}
+			else{
+				result_data += "<li><a class='small_link' href='#"+ (json[i]).split(' ').join('_') +"'><span class='fa fa-code dnl-link-icon'></span> <span class='dnl-link-text'>" + json[i] + "</span></a></li>";
+			}
+
+		}
+		result_data += "</li>";
+	$('#menu').append(result_data);
+
+	  },
+	   error: function(){
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+	
+$('#register').click(function(event){
+    event.preventDefault();
+	var login = $('#login1').val();
+	var pass1 = $('#pass1').val();
+	var pass2 = $('#pass2').val();
+	$('#login1').removeClass('add_red_border');
+	$('#pass1').removeClass('add_red_border');
+	$('#pass2').removeClass('add_red_border');
+	if(!login){
+		$('#login1').addClass('add_red_border');
+	}
+	if(!pass2){
+		$('#pass1').addClass('add_red_border');	
+	}
+	if(!pass2){
+		$('#pass2').addClass('add_red_border');	
+	}
+    
+	if(pass1 == pass2 && login && pass1 && pass2){
+		$.ajax({
+		type: "POST",
+		url: "createUser.php",
+		data:{
+		login:login,
+		pass1: pass1,
+		},
+		cache: false,
+		success: function(data){
+		if(data == 'succ')
+		{
+			$('.alert_admin').text('Konto zostało założone. Proszę sie zalogować.');
+		}
+		else
+		{
+			$('.alert_admin').text('Użytkownik o takim loginie już istnieje.');
+		}
+		}
+		});
+	
+	}
+	else if(pass1 != pass2){
+		$('.alert_admin').text('Hasła nie są takie same!');
+	}
+
+})
+
+$('#login').click(function(event){
+    event.preventDefault();
+	var loginD = $('#loginD').val();
+	var passD = $('#passD').val();
+	$('#loginD').removeClass('add_red_border');
+	$('#passD').removeClass('add_red_border');
+	if(!loginD){
+		$('#loginD').addClass('add_red_border');
+	}
+	if(!passD){
+		$('#passD').addClass('add_red_border');	
+	}
+	if(passD && loginD){
+		$.ajax({
+		type: "POST",
+		url: "checkUser.php",
+		data:{
+		loginD:loginD,
+		passD:passD,
+		},
+		cache: false,
+		success: function(data){
+		if(data == 'succ')
+		{
+		 document.location = "/wig2016/admin.html";
+		}
+		else
+		{
+			$('.alert_admin').text('Niepoprawne dane logowania!');
+		}
+		}
+		})
+	}
+	
+	
+
+})
+
+$('.get_content').click(function(event){
+var contentName =  $(this).find('.get_content_sp').text();
+$(this).addClass('activeContent');
+	$('#content').removeClass('fullOpacity');
+	setTimeout(
+	  function() 
+	  {
+	$.ajax({  
+	  type: "POST",
+      url: 'getContent.php',                      
+      data:{ 
+	  contentName, contentName
+		},  
+      success: function(data)         
+      {
+	  $('#content').html(data);
+	  $('#content').addClass('fullOpacity');
+	  },
+	   error: function(){
+	   alert(data);
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+	  }, 500);
+
+});
+
+var contentName =  $('.get_content_sp:first').text();
+$(this).addClass('activeContent');
+	$('#content').removeClass('fullOpacity');
+	setTimeout(
+	  function() 
+	  {
+	$.ajax({  
+	  type: "POST",
+      url: 'getContent.php',                      
+      data:{ 
+	  contentName, contentName
+		},  
+      success: function(data)         
+      {
+	  $('#content').html(data);
+	  $('#content').addClass('fullOpacity');
+	  },
+	   error: function(){
+	   alert(data);
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+	  }, 500);
+   });
+   
+  $(document).on('click', 'a', function(event){
+  if($(this).hasClass('small_link')) { 
+	
+		event.preventDefault();
+
+		$('html, body').animate({
+			scrollTop: $( $.attr(this, 'href') ).offset().top
+		}, 500);
+	}
+});
+</script>
+</html>

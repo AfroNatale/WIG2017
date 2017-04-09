@@ -1,0 +1,606 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dash, responsive bootstrap dashboard navbar">
+    <meta name="keywords" content="HTML, CSS, JS, JavaScript, dashboard, bootstrap, front-end, frontend, web development, normal, navbar">
+    <meta name="author" content="CodBits">
+
+    <title>Documentation</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet'  type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet'  type='text/css'>
+    <!-- Bootstrap core and other CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="assets/css/grayscale_docu.css" rel="stylesheet">
+    <link href="assets/css/menu.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="assets/js/grayscale.js"></script>
+	<script src="assets/lib/codemirror.js"></script>
+	<link rel="stylesheet" href="assets/lib/codemirror.css">
+	<script src="assets/mode/javascript/javascript.js"></script>
+
+<style>
+ul li {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  
+}
+li.menu{
+	padding: 15px 15px ;
+}
+ul li:hover {
+  color: #fff;
+}
+.menu-on-top ul li ul {
+  padding: 0;
+  position: absolute;   
+  width: 115px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;  
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.menu-on-top ul li ul li { 
+  background-color: #658384;
+  display: block; 
+  color: #fff;
+}
+.menu-on-top ul li ul li:hover { background-color: #819e99 } 
+
+.menu-on-top ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-on-top nav ul ul {
+    display: block;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
+    opacity: 0; 
+    padding: 20px 0px;
+    height: 0;
+    overflow: hidden;
+}
+.menu-on-top nav ul li:hover > ul {
+    height: auto;
+    opacity: 1;
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 640px) {	
+	.menu-on-top ul li ul li {
+		display: none;
+	}
+}
+</style>
+  </head>
+<body>
+<script src="assets/js/script.js"></script>
+<script>
+$(document).ready(function(){
+
+});
+</script>
+<div class="main-wrap">
+
+    <div class="menu-on-top">
+		<nav class="navbar navbar-static-top dash-navbar-top dnl-visible">
+			<div class="container">
+			  <div class="navbar-header page-scroll">
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+					<i class="fa fa-bars"></i>
+				  </button>
+				  <div class="navbar-left">
+					<img src="assets/images/logo.png" alt="">
+				  </div>
+			 </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="navbar-collapse navbar-right navbar-main-collapse">
+					<ul class="nav navbar-nav">
+						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+						<li class="page-scroll">
+							<a href="index.html#about" class="hidden-xs">Home</a>
+							<a href="index.html#about" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Home</a>
+						</li>
+						
+						<li class="page-scroll">
+							<a href="index.html#download" class="hidden-xs">Download</a>
+							<a href="index.html#download" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Download</a>
+						</li>
+						<li class="page-scroll">
+							<a class="hidden-xs active">Documentation</a>
+							<a class="visible-xs active" data-toggle="collapse" data-target=".navbar-collapse">Documentation</a>
+						</li>
+						 <li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Learning</a>
+				  <ul>  
+					  <li class="menu">Basics</li>
+					  <li class="menu">Counters</li>
+					  <li class="menu">Serial</li>
+					  <li class="menu">SPI</li>
+					  <li class="menu">IIC</li>
+					  <li class="menu">oneWire</li>
+					  <li class="menu">LCD</li>
+					  <li class="menu">RTC</li>
+					  <li class="menu">PWM</li>
+				</ul>
+			</li>
+						
+						<li class="page-scroll">
+							<a href="index.html#bootloader" class="hidden-xs">Bootloader</a>
+							<a href="index.html#bootloader" class="visible-xs">Bootloader</a>
+						</li>
+						<li class="page-scroll">
+							<a href="index.html#contact" class="hidden-xs">Contact</a>
+							<a href="index.html#contact" class="visible-xs" data-target=".navbar-collapse">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
+    </div> 
+	
+	
+
+<div class="col-md-12 nopadding">
+	<div class="col-md-12 nopadding">
+		<div class="dash-navbar-left dnl-visible col-md-2 relative menu_fix">
+			<p class="dnl-nav-title">Documentation 2.x</p>
+			<ul class="dnl-nav" id="menu">
+				
+				
+			</ul>
+			
+		</div>
+	<div class="col-md-8 content" id="content">
+
+
+	</div>
+	<div class="col-md-2 admin_panel" id="admin_panel">
+	<a href="#" id="bigger_panel">ROZWIŃ PANEL</a>
+	<a href="logoutUser.php" id="logout">WYLOGUJ</a>
+	<p class="head_admin">Panel administratora:</p>
+	<p class="alert_admin"></p>
+	<p class="info_admin">Stwórz sekcję:</p>
+		<form id="create_section">
+		  <p>Nazwa sekcji:</p>
+		  <input type="text" name="name" class="form-control" id="sect_name">
+		  <p>Dodaj po:</p>
+		  <select class="form-control" name="selectCreate" id="selectCreate">
+
+		  
+		  </select>
+		  <button type="submit"  class="btn btn-success" id="add_section">Dodaj sekcję</button>
+		</form> 
+	<p class="info_admin">Stwórz menu:</p>
+		<form id="create_section">
+		  <p>Nazwa itemu:</p>
+		  <input type="text" name="name" class="form-control" id="menu_name">
+		  <p>Dodaj do sekcji:</p>
+		  <select class="form-control" name="section" id="select">
+
+		  
+		  </select>
+		  <p>Treść itemu:</p>
+		  <textarea rows="4" cols="50" type="text" name="content" class="form-control" id="menu_content"></textarea>
+		  <button style="margin-top: 20px;" type="submit"  class="btn btn-success" id="add_menu">Dodaj item</button>
+		</form> 
+	</div>
+</div>
+<script>
+
+
+
+
+$(document).ready(function() {
+
+$('#add_section').click(function(event){
+    event.preventDefault();
+var name=$("#sect_name").val();
+var afterName=$("#selectCreate option:selected").text();
+
+$("#sect_name").removeClass('add_red_border');
+
+if(!name){
+		$("#sect_name").addClass('add_red_border');
+	}
+if(name){
+var add_whole_sec = '<li class="whole_section"><a class="collapsed accordion-toggle get_content" data-toggle="collapse" href="#" aria-expanded="true"><span class="fa fa-chevron-down dnl-link-icon"></span><span class="dnl-link-text get_content_sp">'+name+'</span><span class="dnl-btn-sub-collapse"><span class="badge">0</span></span></a><a href="#" class="delSec"><i class="fa fa-times" aria-hidden="true"></i></a><ul class="dnl-sub-one collapse" id="">';
+$.ajax({
+	type: "POST",
+	url: "createSection.php",
+	data:{
+		name:name,
+		afterName:afterName,
+	},
+cache: false,
+success: function(data){
+if(data == 'succ')
+{
+	$(".dnl-link-text:contains('" + afterName + "')").closest('li').after(add_whole_sec);
+	$('.alert_admin').text('Dodano sekcję.');
+	updateSelect();
+	$('#sect_name').val('');
+}
+else if(data == 'exist') {
+	$('.alert_admin').text('Taka nazwa sekcji już istnieje!');
+}
+{
+	
+}
+}
+});
+return false;
+}
+else{
+	$('.alert_admin').text('Podaj nazwę sekcji!');
+}
+});
+	function updateSelect(){
+	$.ajax({  
+	  type: "GET",
+      url: 'getList.php',                      
+      data: "",                                                             
+	  async:false,	  
+      success: function(data)         
+      {
+	  var json2 = JSON.parse(data);
+	  var result_list = "";
+
+	  var list_length = Object.keys(json2).length;
+	  for (i=0; i < list_length; i++){
+			result_list += "<option value="+json2[i]+">"+json2[i]+"</option>";
+		}
+	$('#select').empty().append(result_list);
+	$('#selectCreate').empty().append(result_list);
+
+	  },
+	   error: function(){
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+	
+	
+	}
+	
+	
+});
+
+$(document).ready(function() { 
+
+
+	$.ajax({  
+	  type: "GET",
+      url: 'getMenu.php',                      
+      data: "",                                                             
+	  async:false,	  
+      success: function(data)         
+      {
+	  var json = JSON.parse(data);
+	  var result_data = "";
+	  var counter = 1;
+	  var data_length = Object.keys(json).length;
+	  for (i=0; i < data_length; i++){
+	  		if(json[i].search('n:') != -1 && i == 0){
+			      result_data +='<li class="whole_section"><a class="collapsed accordion-toggle get_content" data-toggle="collapse" href="#'+ counter +'" aria-expanded="true"><span class="fa fa-chevron-down dnl-link-icon"></span><span class="dnl-link-text get_content_sp">'+ json[i].substring(3) +'</span><span class="dnl-btn-sub-collapse"><span  class="badge">4</span></span></a><a href="#" class="delSec"><i class="fa fa-times" aria-hidden="true"></i></a><ul class="dnl-sub-one collapse" id='+ counter +'>';
+				  counter++;
+			}
+			else if(json[i].search('n:') != -1){
+					result_data +='</ul></li><li><a class="collapsed accordion-toggle get_content" data-toggle="collapse" href="#'+ counter +'" aria-expanded="true"><span class="fa fa-chevron-down dnl-link-icon"></span><span class="dnl-link-text get_content_sp">'+ json[i].substring(3) +'</span><span class="dnl-btn-sub-collapse"><span class="badge">4</span></span></a><a href="#" class="delSec"><i class="fa fa-times" aria-hidden="true"></i></a><ul class="dnl-sub-one collapse" id='+counter+'>';
+				counter++;
+			}
+			else{
+				result_data += "<li><a class='small_link' href='#"+ (json[i]).split(' ').join('_') +"'><span class='fa fa-code dnl-link-icon'></span> <span class='dnl-link-text'>" + json[i] + "</span></a><a href='#' class='delMen'><i class='fa fa-times' aria-hidden='true'></i></a><a href='#' class='deprMen'><i class='fa fa-minus-circle' aria-hidden='true'></i></a></li>";
+			}
+	  
+		}
+	$('#menu').append(result_data);
+	checkDepr();
+	  },
+	   error: function(){
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+	
+	function checkDepr(){
+		$("span.dnl-link-text").each(function() {
+		var that = $(this);
+		var name_text = $(this).text();
+				$.ajax({  
+			  type: "POST",
+			  url: 'checkDepr.php',                      
+			  data: {
+			  name_text:name_text
+				},			  	  
+			  success: function(data)         
+			  {
+				if(data == 1){
+					$(that).addClass('depr');
+				}
+				else $(that).addClass('ok');
+
+			  },
+			   error: function(){
+				alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+			  }
+			   
+
+			   
+			});
+		
+		});
+	
+	}
+	
+	$.ajax({  
+	  type: "GET",
+      url: 'getList.php',                      
+      data: "",                                                             
+	  async:false,	  
+      success: function(data)         
+      {
+	  var json2 = JSON.parse(data);
+	  var result_list = "";
+
+	  var list_length = Object.keys(json2).length;
+	  for (i=0; i < list_length; i++){
+			result_list += "<option value="+json2[i]+">"+json2[i]+"</option>";
+		}
+	$('#select').append(result_list);
+	$('#selectCreate').append(result_list);
+
+	  },
+	   error: function(){
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+
+
+});
+
+$(document).ready(function() 
+{
+      var editor = CodeMirror.fromTextArea(document.getElementById('menu_content'),{
+	  lineNumbers: true
+	  
+	  })
+$('#add_menu').click(function(event){
+    event.preventDefault();
+var menuName=$("#menu_name").val();
+var belongName=$("#select option:selected").text();
+var content = editor.getValue();
+$("#sect_name").removeClass('add_red_border');
+
+if(!menuName){
+		$("#menu_name").addClass('add_red_border');
+	}
+if(menuName){
+$.ajax({
+type: "POST",
+url: "createMenu.php",
+data:{
+menuName:menuName,
+belongName: belongName,
+content: content,
+},
+cache: false,
+success: function(data){
+	var nextH2 = $(".dnl-link-text:contains('" + belongName + "')").closest('.get_content').next('a').next('ul').append("<li><a class='small_link' href='#"+ (menuName).split(' ').join('_') +"'><span class='fa fa-code dnl-link-icon'></span> <span class='dnl-link-text'>" + menuName + "</span></a><a href='#' class='delMen'><i class='fa fa-times' aria-hidden='true'></i></a><a href='#' class='deprMen'><i class='fa fa-minus-circle' aria-hidden='true'></i></a></li>");
+	$('#menu_name').val('');
+	$(".dnl-link-text:contains('" + belongName + "')").next().children().addClass('incr');
+	$('.incr').text(parseInt($('.incr').text()) + 1);
+}
+});
+}
+else $('.alert_admin').text('Podaj nazwę itemu!');
+
+});
+
+$('.get_content').click(function(event){
+var contentName =  $(this).find('.get_content_sp').text();
+$(this).addClass('activeContent');
+	$('#content').removeClass('fullOpacity');
+	setTimeout(
+	  function() 
+	  {
+	$.ajax({  
+	  type: "POST",
+      url: 'getContent.php',                      
+      data:{ 
+	  contentName, contentName
+		},  
+      success: function(data)         
+      {
+	  $('#content').html(data);
+	  $('#content').addClass('fullOpacity');
+	  },
+	   error: function(){
+	   alert(data);
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+	  }, 500);
+
+});
+
+
+
+$('.delMen').click(function(){
+	var getDel = $(this).prevAll().find('.dnl-link-text').text();
+	$(this).addClass('hideIt');
+	var getSecDel = $(this).closest('.dnl-sub-one').prev().find('.get_content_sp').text();
+	$(this).closest('li').addClass('hideIt');
+	$.ajax({  
+	  type: "POST",
+      url: 'deleteMenu.php',                      
+      data:{
+	  getDel:getDel,  
+	  getSecDel:getSecDel,  
+		},
+	  async:false,	  
+      success: function(data)         
+      {
+		$('.hideIt').addClass('superHide');
+		$('.hideIt').closest($('.dnl-sub-one')).prev().prev().children($('.dnl-btn-sub-collapse')).children().addClass('decr');
+		$('.decr').text(parseInt($('.decr').text()) - 1);
+
+	  },
+	   error: function(){
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+
+
+})
+
+$('.deprMen').click(function(){
+	var getDep = $(this).prevAll().find('.dnl-link-text').text();
+	var that_depr = $(this);
+	$.ajax({  
+	  type: "POST",
+      url: 'deprMenu.php',                      
+      data:{
+	  getDep:getDep   
+		},
+	  async:false,	  
+      success: function(data)         
+      {
+		if(data == '1'){
+			$(that_depr).closest('li').children().find('.dnl-link-text').removeClass('depr');
+		}
+		else if(data == '0'){
+			$(that_depr).closest('li').children().find('.dnl-link-text').addClass('depr');
+		}
+	  },
+	   error: function(){
+	   
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+
+
+})
+
+$('.delSec').click(function(){
+	var getDel = $(this).prev().find('.dnl-link-text').text();
+	$(this).addClass('hideIt');
+	$(this).closest('li').addClass('hideIt');
+	
+	$.ajax({  
+	  type: "POST",
+      url: 'deleteSection.php',                      
+      data:{
+	  getDel:getDel,  
+		},
+	  async:false,	  
+      success: function(data)         
+      {
+		$('.hideIt').addClass('superHide');
+
+	  },
+	   error: function(){
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+
+
+})
+
+var contentName =  $('.get_content_sp:first').text();
+$(this).addClass('activeContent');
+	$('#content').removeClass('fullOpacity');
+	setTimeout(
+	  function() 
+	  {
+	$.ajax({  
+	  type: "POST",
+      url: 'getContent.php',                      
+      data:{ 
+	  contentName, contentName
+		},  
+      success: function(data)         
+      {
+	  $('#content').html(data);
+	  $('#content').addClass('fullOpacity');
+	  },
+	   error: function(){
+	   alert(data);
+		alert('Nie mozna polaczyc sie z baza danych, prosze sprobowac pozniej.');
+	  }
+       
+
+       
+    });
+	  }, 500);
+	  
+	$("ul.dnl-sub-one").each(function() {
+    var counter = $(this).find('li').length;
+    $(this).prev().prev().children('.dnl-btn-sub-collapse').children().text(counter);
+	});
+   });
+
+$('#bigger_panel').click(function(){
+$('#content').toggleClass('small_content');
+$('#admin_panel').toggleClass('big_admin');
+});
+
+
+  $(document).on('click', 'a', function(event){
+  if($(this).hasClass('small_link')) { 
+	
+		event.preventDefault();
+
+		$('html, body').animate({
+			scrollTop: $( $.attr(this, 'href') ).offset().top
+		}, 500);
+	}
+});
+</script>
+</body>
+</html>

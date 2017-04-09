@@ -1,0 +1,170 @@
+.nopadding{
+padding: 0px;
+}
+.nopaddingleft{
+padding-left: 0px;
+}
+.nopaddingright{
+padding-right: 0px;
+}
+.marginbottom40{
+margin-bottom: 40px;
+}
+.margintop40{
+margin-top: 40px;
+}
+.clearboth{
+clear:both;
+}
+body{
+font-family: 'Oswald', sans-serif;
+}
+.small_content{
+opacity: 0;
+height: 1px;
+width: 0px;
+overflow: hidden;
+transition: all 1s;
+-webkit-transition: all 1s;
+}
+.depr{
+    color: #8c8b8b !important;
+}
+.rem_depr{
+ color: #FFF !important;
+}
+#logout{
+color: white;
+float:right;
+}
+#bigger_panel{
+color: white;
+}
+.admin_panel{
+transition: all 1s;
+-webkit-transition: all 1s;
+}
+.men_title{
+padding-top: 2px;
+border-top: 1px solid black;
+}
+
+.section p{
+padding-left: 20px;
+}
+.section h2{
+padding-left: 20px;
+}
+.big_admin{
+width: 80%;
+transition: all 1s;
+-webkit-transition: all 1s;
+}
+.relative{
+position: relative;
+}
+.navbar{
+margin-bottom: 0px;
+    z-index: 2;
+}
+input{
+    font-size: 16px;
+    padding: 20px !important;
+	color: black !important;
+}
+
+.visible_a{
+display: block !important;
+opacity: 1 !important;
+transition: all 1s;
+-webkit-transition: all 1s;
+
+}
+.visible_a p{
+height: auto !important;
+}
+.admin_panel{
+	    min-height: 100vh;
+    background-color: #43484b;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 999;
+    padding-top: 5px;
+}
+.admin_panel input{
+margin-bottom: 10px;
+}
+.admin_panel .info_admin{
+font-size: 18px;
+margin-top: 10px;
+
+}
+.admin_panel button{
+margin-bottom: 10px;
+}
+.admin_panel .alert_admin{
+height: 40px;
+font-size: 16px;
+color: red;
+}
+.add_red_border{
+border: 2px solid red;
+}
+.head_admin{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+.menu_fix{
+min-height: 100vh;
+top: 0px;
+}
+#content{
+opacity: 0;
+transition: all 1s;
+-webkit-transition: all 1s;
+}
+.fullOpacity{
+opacity: 1 !important;
+transition: all 1s;
+-webkit-transition: all 1s;
+}
+
+.admin_menu p{
+margin-bottom: 0px;
+}
+.delMen{
+    padding: 1px 1px !important;
+    color: red !important;
+}
+.deprMen{
+    padding: 1px 1px !important;
+	margin-left: 5px;
+    color: white !important;
+}
+.delSec{
+    padding: 5px 5px !important;
+    color: red !important;
+}
+#create_section select{
+margin-bottom: 20px;
+}
+.content{
+padding: 20px;
+}
+.content p{
+font-size: 20px;
+}
+.content h2{
+font-size: 30px;
+}
+.menu h2{
+ margin-bottom: 20px;
+ }
+ .delSec{
+ display: inline-block !important;
+ opacity: 1 !important;
+ }
+ .superHide{
+ display: none !important;
+ }
